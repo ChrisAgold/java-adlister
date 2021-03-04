@@ -3,16 +3,18 @@ import java.io.*;
 import javax.servlet.*;
 import javax.servlet.http.*;
 
-// User types hello-world to get to servlet
-@WebServlet(name = "HelloWorldServlet", urlPatterns = "/hello")
+@WebServlet(name = "WhatNumberServlet", urlPatterns = "/hello")
 public class HelloWorldServlet extends HttpServlet {
 
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        response.setContentType("text/html");
-        PrintWriter out = response.getWriter();
-        // Add HTML to page
-        out.println("<h1>Hello, World!</h1>");
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+        String name = req.getParameter("name");
+        resp.setContentType("text/html");
+        PrintWriter out = resp.getWriter();
+        if (name != null) {
+            out.println("<h1>Hello " + name + "</h1>");
+        } else {
+            out.println("<h1>Hello, World!</h1>");
+        }
     }
 }
-
