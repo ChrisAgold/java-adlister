@@ -6,6 +6,7 @@ import javax.servlet.http.*;
 @WebServlet(name = "WhatNumberServlet", urlPatterns = "/hello")
 public class HelloWorldServlet extends HttpServlet {
 
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         String name = req.getParameter("name");

@@ -15,5 +15,10 @@
         <li><a href="#">About</a></li>
         <li><a href="#">Music</a></li>
     </ul>
+    <form action="" method="get">
+        <label for="term">Term:</label>
+        <input id="term" type="text" name="term">
+        <button>Search</button>
+    </form>
 </nav>
 </html>
