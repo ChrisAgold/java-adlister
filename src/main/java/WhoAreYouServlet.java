@@ -5,15 +5,15 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(name = "LoginServlet", urlPatterns = "/login")
-public class HelloWorldServlet extends HttpServlet {
+@WebServlet(name = "WhoAreYouServlet", urlPatterns = "/who-are-you")
+public class WhoAreYouServlet extends HttpServlet {
+
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        request.getRequestDispatcher("login.jsp").forward(request, response);
+        String name = request.getParameter("name");
+        request.setAttribute("name", name);
+        request.getRequestDispatcher("who-are-you.jsp").forward(request, response);
     }
 }
-
-
-
 
 
 
