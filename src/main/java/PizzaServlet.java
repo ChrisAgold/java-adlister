@@ -17,6 +17,20 @@ public class PizzaServlet extends HttpServlet {
         String sauceType = request.getParameter("sauce_types");
         String pizzaSize = request.getParameter("size");
 
+//        if (crustType != null && sauceType != null && pizzaSize != null && toppings != null && userAddress != null) {
+//            System.out.println(crustType);
+//            System.out.println(sauceType);
+//            System.out.println(pizzaSize);
+//
+//            // select multiple toppings
+//            String[] toppings = request.getParameterValues("toppings");
+//            for (int i = 0; i <= toppings.length - 1; i++) {
+//                System.out.println(toppings[i]);
+//            } else{
+//                System.out.println("User did not fill in all forms.");
+//            }
+
+
         System.out.println(crustType);
         System.out.println(sauceType);
         System.out.println(pizzaSize);
